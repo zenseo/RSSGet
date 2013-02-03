@@ -1,9 +1,9 @@
 <?php
 
-require_once( 'class.rssget.php' );
+require_once( 'rssget.php' );
 
-$rssget_rss = new rssget( 'http://feeds.rssboard.org/rssboard' );
-$rssget_atom = new rssget( 'http://www.atomenabled.org/atom.xml' );
+$rssget_rss = new \zelenin\rssget( 'https://news.google.com/news/feeds?pz=1&cf=all&ned=us&hl=en&topic=h&num=3&output=rss' );
+$rssget_atom = new \zelenin\rssget( 'http://www.atomenabled.org/atom.xml' );
 
 echo '<pre>';
 

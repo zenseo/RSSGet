@@ -9,7 +9,8 @@
  * @license http://opensource.org/licenses/gpl-3.0.html GPL-3.0
  */
 
- if ( !class_exists( 'rssget' ) ) :
+namespace zelenin;
+use DOMDocument;
 
 class rssget extends DOMDocument {
 
@@ -20,10 +21,17 @@ class rssget extends DOMDocument {
 	public $feed_content;
 	public $channel = array();
 	public $items = array();
+	public $http_code;
 
 	public function __construct( $feed_url ) {
+		require_once 'curl.php';
+		$curl = new curl;
 		$this->feed_url = $feed_url;
-		$this->feed_content = file_get_contents( $this->feed_url );
+		$feed = $curl->get( $this->feed_url );
+		$this->http_code = $feed['info']['http_code'];
+		if ( $this->http_code != 200 ) return false;
+
+		$this->feed_content = $feed['body'];
 		$this->loadXML( $this->feed_content );
 		$this->check_type();
 		$this->channel();
@@ -31,7 +39,6 @@ class rssget extends DOMDocument {
 	}
 
 	public function check_type() {
-
 		if ( is_object( $this->getElementsByTagName( 'feed' )->item(0) ) ) {
 			$this->feed_type = 'atom';
 			$this->channel_tag = 'feed';
@@ -41,7 +48,6 @@ class rssget extends DOMDocument {
 			$this->channel_tag = 'channel';
 			$this->item_tag = 'item';
 		}
-
 	}
 
 	public function channel() {
@@ -86,7 +92,5 @@ class rssget extends DOMDocument {
 	}
 
 }
-
-endif;
 
 ?>
