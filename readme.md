@@ -1,4 +1,4 @@
-# rssget
+# RSSGet
 
 PHP class for parsing of RSS-feeds and atoms. Output to array.
 
@@ -8,8 +8,8 @@ See example.php.
 
 ## Development
 
-- Source hosted at [GitHub](https://github.com/zelenin/rssget)
-- Report issues, questions, feature requests on [GitHub Issues](https://github.com/zelenin/rssget/issues)
+- Source hosted at [GitHub](https://github.com/zelenin/RSSGet)
+- Report issues, questions, feature requests on [GitHub Issues](https://github.com/zelenin/RSSGet/issues)
 
 ## Author
 
