@@ -15,6 +15,7 @@ use DOMDocument;
 
 class RSSGet extends DOMDocument
 {
+	const VERSION = '1.0.1';
 	private $feed_url;
 	private $http_code;
 	private $feed_content;
@@ -26,7 +27,6 @@ class RSSGet extends DOMDocument
 
 	public function __construct( $feed_url )
 	{
-		require_once 'Curl.php';
 		$curl = new Curl;
 		$this->feed_url = $feed_url;
 		$feed = $curl->get( $this->feed_url );
