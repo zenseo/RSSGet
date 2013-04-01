@@ -15,7 +15,8 @@
 	"autoload": {
 		"psr-0": { "Zelenin": "lib/" }
 	},
+	"license": "GPL-3.0",
 	"keywords": [ "rss", "atom" ],
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"homepage": "https://github.com/zelenin/RSSGet"
 }
