@@ -1,21 +1,31 @@
 {
 	"name": "zelenin/rssget",
 	"description": "PHP class for parsing of RSS-feeds and atoms. Output to array.",
-	"minimum-stability": "stable",
+	"version": "1.1.0",
+	"type": "library",
+	"keywords": ["rss", "atom"],
+	"homepage": "https://github.com/zelenin/RSSGet",
+	"time": "2013-08-28",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Aleksandr Zelenin",
-			"email": "aleksandr@zelenin.me"
+			"email": "aleksandr@zelenin.me",
+			"homepage": "http://zelenin.me",
+			"role": "Developer"
 		}
 	],
+	"support": {
+		"issues": "https://github.com/zelenin/RSSGet/issues",
+		"source": "https://github.com/zelenin/RSSGet"
+	},
 	"require": {
 		"php": ">=5.3.0"
 	},
 	"autoload": {
-		"psr-0": { "Zelenin": "src/" }
+		"psr-0": {
+			"Zelenin\\": "src/"
+		}
 	},
-	"license": "GPL-3.0",
-	"keywords": [ "rss", "atom" ],
-	"version": "1.1.0",
-	"homepage": "https://github.com/zelenin/RSSGet"
+	"minimum-stability": "stable"
 }

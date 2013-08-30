@@ -1,6 +1,6 @@
 <?php
 
-require_once 'src/Zelenin/RSSGet.php';
+require_once 'vendor/autoload.php';
 
 $rssget_rss = new \Zelenin\RSSGet( 'https://news.google.com/news/feeds?pz=1&cf=all&ned=us&hl=en&topic=h&num=3&output=rss' );
 $rssget_atom = new \Zelenin\RSSGet( 'https://github.com/zelenin/RSSGet/commits/master.atom' );

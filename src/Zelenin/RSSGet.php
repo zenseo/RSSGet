@@ -6,8 +6,8 @@
  * @package RSSGet
  * @author  Aleksandr Zelenin <aleksandr@zelenin.me>
  * @link    https://github.com/zelenin/rssget
+ * @license MIT
  * @version 1.1.0
- * @license http://opensource.org/licenses/gpl-3.0.html GPL-3.0
  */
 
 namespace Zelenin;
